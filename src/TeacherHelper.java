@@ -52,6 +52,7 @@ public class TeacherHelper {
 					System.out.println("Digite a nota do " + (i+1) + "º aluno:");
 					notaAluno = leitor.nextDouble();
 					mediaAlunos = mediaAlunos + notaAluno;
+					i = i + 1;
 				}
 				mediaAlunos = mediaAlunos / qtdeAlunos;
 				System.out.println("A média de notas dos alunos dessa turma é " + mediaAlunos);
