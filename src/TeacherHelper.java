@@ -2,16 +2,18 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class TeacherHelper {
-
-	public static final double horaAula = 17.50;
+ //public static final double horaAula = 17.50; não é uma variável, e sim uma constante.
+	
 	public static void main(String[] args) {
 		int opcao=0, numeroAulas, qtdeAlunos, i;
 		double salarioBase, horaAtividade, descansoSemanalRemunerado, salario, notaAluno, mediaAlunos;
+		double horaAula;
 		
 		Random gerador = new Random();
 		
 		Scanner leitor = new Scanner(System.in);
 		
+		//enquanto a opcao for diferente de 4.
 		while(opcao!=4) {
 			System.out.println("FERRAMENTA DE AUXÍLIO AO PROFESSOR!");
 			System.out.println("Selecione a opção desejada:");
@@ -27,6 +29,8 @@ public class TeacherHelper {
 				 * http://www1.sinprosp.org.br/guia_consultas.asp?mat=8*/
 				System.out.println("Para calcular seu salário base precisamos saber quantas aulas semanais o professor tem na instituição");
 				numeroAulas = leitor.nextInt();
+				System.out.println("Por favor, informe o valor da hora-aula praticada na sua escola");
+				horaAula = leitor.nextDouble();
 				salarioBase = numeroAulas * 4.5 * horaAula;
 				horaAtividade = salarioBase * 0.05;
 				descansoSemanalRemunerado = (salarioBase + horaAtividade) / 6;
@@ -55,6 +59,7 @@ public class TeacherHelper {
 				break;
 			case 3:
 				
+				//vai gerar um valor aleatorio entre 0 e 7 -1.
 				switch(gerador.nextInt(7)) {
 				case 1:
 					System.out.println("Você é um professor incrível!");
