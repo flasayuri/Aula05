@@ -61,6 +61,9 @@ public class TeacherHelper {
 				
 				//vai gerar um valor aleatorio entre 0 e 7 -1.
 				switch(gerador.nextInt(7)) {
+				case 0:
+					System.out.println("Você é o responsável pelos alunos perderem os cabelos com fatorial!");
+					break;
 				case 1:
 					System.out.println("Você é um professor incrível!");
 					break;
